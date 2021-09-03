@@ -1,0 +1,23 @@
+﻿@page
+@model MyWebApplication2.Pages.DiceRollModel
+@{
+
+    int randomNumber = new Random().Next(1, 7); //GENERATES NUMBER BETWEEN 1 and 6
+
+    int winningNumber = 6;
+
+    int diffFactor = Math.Abs(randomNumber - winningNumber);
+
+}
+
+<h1 class="border">Winning number is  :  @winningNumber</h1>
+<h2>You rolled : @randomNumber</h2>
+
+@if (randomNumber == winningNumber)
+{
+    <h1>You Win</h1>
+}
+else
+{
+    <h2>You lose by @diffFactor </h2>
+}

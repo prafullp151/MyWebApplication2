@@ -1,0 +1,21 @@
+﻿@page
+@model MyWebApplication2.Pages.HelloWorldModel
+@{
+    string myMessage = "Hello World C#";
+    int currentHour = DateTime.Now.Hour;
+
+}
+<h1 class="h6">Hello World</h1>
+<div class="row">
+    <div class="col-4">Picture here</div>
+    <div class="col-8">This is main content</div>
+</div>
+<h2>@myMessage</h2>
+@if (currentHour < 12)
+{
+    <h4>Good Morning!</h4>
+}
+else
+{
+    <h2>Good Afternoon</h2>
+}
